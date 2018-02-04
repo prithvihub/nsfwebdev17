@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<style>body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+img {border: 20px solid #cc4242;}
+</style>            
+<h2>
+	Function to Split an Array into Odd and Even Numbers
+
+</h2>
+
+  The numbers in the array are 9, 8, 4, 12, 11, 3, 5, 17, 21, 100.
+<br>
+<br>
+             <input type="button" name="clickbtn" value="Display Odd Numbers" onclick="isOdd()" >
+
+             <input type="button" name="clickbtn" value="Display Even Numbers" onclick="isEven()" >
+            <br><br>
+            Result : <br>
+             
+            <input type="text" id="result" name="TextBox2" disabled>
+            <br>
+
+<script  type="text/javascript">
+
+function  isOdd() {
+
+var text= "";
+var i = 0; var n1 = 0; var n2 = 0; var n3 = 0; 
+var numb = [9, 8, 4, 12, 11, 3, 5, 17, 21, 100];
+
+for (i = 0; i < numb.length; i++) { 
+    n1 = numb[i]  / 2;
+    n2 = Math.round(n1);
+    n3 = n2 - n1;
+    if  (n3 != 0  ) {
+    text += numb[i] + "  "; }
+}
+
+document.getElementById("result").value = text;
+
+}
+
+
+function  isEven() {
+
+var text= "";
+var i = 0; var n1 = 0; var n2 = 0; var n3 = 0; 
+var numb = [5, 8, 3, 4, 8, 19, 22, 6, 9, 12];
+
+for (i = 0; i < numb.length; i++) { 
+    n1 = numb[i]  / 2;
+    n2 = Math.round(n1);
+    n3 = n2 - n1;
+    if  (n3 == 0  ) {
+    text += numb[i] + "  "; }
+}
+
+document.getElementById("result").value = text;
+
+}
+
+
+
+</script>
+
+</body>
+</html>

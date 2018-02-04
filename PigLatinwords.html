@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Pig Latin Convertor </title>
+<body>
+	<style>body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+img {border: 20px solid #cc4242;}
+</style>         
+            <h1>Pig Latin Convertor</h1>
+
+
+            Enter Text in English  :
+            <br>
+            <input type="text" id="Text1" name="TextBox1">
+            <br>
+             <input type="button" name="clickbtn" value="Display Result" onclick="convlat()" >
+            <br>
+            Result : <br>
+            <input type="text" id="txtresult" name="TextBox2" disabled>
+            <br>
+
+        <script type="text/javascript">
+
+            function convlat(){
+              var result = "";
+             var inputfield = document.getElementById("Text1").value;
+             var words = inputfield.split(" ");
+            
+            for (var j = 0; j < words.length ; j++) {
+             var w = words[j];
+             var len = w.length;
+             var i= 0;
+             var vow = 'f';
+             var startvow = 'f';
+
+             var prefx = "";
+             var sufx = "";
+             while ( i <= len )
+                 {
+                    if  ( w.charAt(i) == "a"  || w.charAt(i) == "e"   ||   w.charAt(i) == "i" || w.charAt(i) ==  "o"    ||   w.charAt(i) == "u"  || vow == "t"  )
+                   {
+                      
+                      prefx += w.charAt(i);                    
+                     vow = 't' ; 
+                     if ( i == 0 )
+                         {
+                           startvow = 't';
+                          }
+                     }
+                   else      
+                    {       
+                     sufx += w.charAt(i);
+                    } 
+                     i++;
+                      
+                 }
+              if  (startvow == 't' ) { sufx = sufx + 'yay'  ; }
+                
+              else if  (vow == 't'  ) { sufx = sufx + 'ay'  ; }
+
+              result = result + prefx + sufx + " ";
+            }
+            document.getElementById("txtresult").value = result;
+            }
+        </script>
+
+</body>
+
+</html>

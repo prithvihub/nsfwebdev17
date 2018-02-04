@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 400, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+section {
+    min-height: 50%;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+<a href="#section2">Tennis</a>
+
+<a href="#section3">Cricket</a>
+
+<a href="#section4">Football</a>
+</div>
+
+
+<div class="main" id="section2">
+
+  <img src = "http://www.atpworldtour.com/-/media/images/news/2017/10/29/16/09/federer-basel-2017-sunday-holder.jpg" align="left" height="600" width="700">
+</div>
+
+<div class="main" id="section3">
+  <img src = "http://images.indianexpress.com/2017/04/sachin-m4.jpg" align="left" height="600" width="700">
+</div>
+
+<div class="main" id="section4">
+  <img src = "https://usatpatriotswire.files.wordpress.com/2017/09/usatsi_10264566.jpg?w=700&h=600&crop=1">
+</div>
+</body>
+</html>

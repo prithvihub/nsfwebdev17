@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Triangle Area Calculation</title>
+</head>
+
+<style>body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+img {border: 20px solid #cc4242;}
+</style>         
+</body>
+Enter Base of Triangle
+<br>
+<input type= "text" id= "base">
+<br>
+<br> Enter Height of Triangle
+<br>
+<input type= "text" id= "height">
+<br>
+<br>
+<input type= "button" name = "click" value = "Answer" onclick="calculate()">
+<br>
+
+<input type = "text" id="ans" disabled>
+</p>
+
+
+<script type="text/javascript">
+	function calculate(){
+		var a = parseInt(document.getElementById("base").value)
+        var b = parseInt(document.getElementById("height").value)
+        var result = (a * b) / 2
+        
+        document.getElementById("ans").value = result;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+
+	<style>body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+img {border: 20px solid #cc4242;}
+</style>            
+<h2>
+	Program to Calculate Area of a Triangle
+
+</h2>
+<br>
+
+The area of a triangle with Sides 5,6 and 7 is
+<br>
+<br>
+            <input type="text" id="txtresult" name="Box1">
+
+
+<script type="text/javascript">
+var side1 = 5; 
+var side2 = 6; 
+var side3 = 7; 
+var peri = (side1 + side2 + side3)/2;
+var area =  Math.sqrt(peri*((peri-side1)*(peri-side2)*(peri-side3)));
+
+document.getElementById("txtresult").value = area;
+
+</script>
+

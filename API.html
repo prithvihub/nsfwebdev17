@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Maps Application!</title>
+	<style type="text/css">
+		#map
+		{
+			height: 400px;
+			width: 100%;
+		}
+body {background-color: powderblue;}
+	</style>
+</head>
+<body>
+
+<h1>Philadelphia Map!</h1>
+<div id = "map"></div>
+<script type="text/javascript">
+
+
+	function initMap()
+	{
+		var detroit = {lat: 39.9526 , lng: -75.1652};
+
+		var map = new google.maps.Map(document.getElementById('map'), {zoom: 15 , center: detroit, maptypeId: 'satellite'}) ; 
+
+		var secane = {lat:39.9496, lng: -75.1503}; 
+
+		var marker = new google.maps.Marker({position: secane , map: map}) ; 
+	}
+</script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_EgUMgKyIcAxTIEoblEafoTUYNtVB0sY&callback=initMap"> </script>
+</body>
+</html>
